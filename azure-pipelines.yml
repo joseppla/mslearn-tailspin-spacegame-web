@@ -36,6 +36,10 @@ steps:
   displayName: 'Write build info'
   workingDirectory: Tailspin.SpaceGame.Web/wwwroot
 
+- script: 'echo "Test me"'
+  displayName: 'This is my test step'
+  workingDirectory: Tailspin.SpaceGame.Web/wwwroot
+
 - task: DotNetCoreCLI@2
   displayName: 'Restore project dependencies'
   inputs:

@@ -48,13 +48,13 @@ steps:
     command: 'restore'
     projects: '**/*.csproj'
 
-- task: templates/build.yaml
+- template: templates/build.yaml
   parameters:
-    buildConfiguration 'Debug'
+    buildConfiguration: 'Debug'
 
-- task: templates/build.yaml
+- template: templates/build.yaml
   parameters:
-    buildConfiguration 'Release'
+    buildConfiguration: 'Release'
 
 - task: PublishBuildArtifacts@1
   displayName: 'Publish Artifact: drop'
